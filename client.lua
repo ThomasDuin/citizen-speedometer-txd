@@ -17,11 +17,9 @@ currentGear = 1
 CreateThread(function()
 	while true do
 		Wait(0)
-        displayText(0.025, 0.65, 0.25, 0.45, "speed: " .. currentSpeed, 255, 255, 255, 255)
 		RequestStreamedTxd("default")
 		while not HasStreamedTxdLoaded("default") do
 			Wait(0)
-			displayText(0.025, 0.65, 0.25, 0.45, "NOT LOADED1", 255, 255, 255, 255)
 		end
 
         if currentCar > 0 then
