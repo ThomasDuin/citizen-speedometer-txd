@@ -36,6 +36,9 @@ CreateThread(function()
 
             DrawSprite(txdPin, 0.75, 0.87, 0.15, 0.15, ToFloat(currentSpeed), 255, 255, 255, 255)
             DrawSprite(txdPin, 0.90, 0.87, 0.15, 0.15, ToFloat(currentRev), 255, 255, 255, 255)
+
+            currentGear = GetVehicleGear(currentCar)
+            if currentGear ~= false then currentGear = math.floor(GetVehicleGear(currentCar)) else currentGear = -1 end
         end
 	end
 end)
